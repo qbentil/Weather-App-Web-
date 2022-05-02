@@ -30,7 +30,7 @@ export const Weather = ({location}) => {
             // console.log(response);
             setData(response)
         } catch (e) {
-          console.log(e.response.data?.message);
+          alert(e.response.data?.message);
           return;
         }
     }
