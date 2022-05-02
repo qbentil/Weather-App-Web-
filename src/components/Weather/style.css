@@ -24,8 +24,13 @@
     margin: 0;
 }
 
-.content .left, .content .right{
-    width: 50%;
+.content .right{
+    width: 40%;
+    align-items: center;
+    padding: 0 20px;
+}
+.content .left{
+    width: 60%;
     align-items: center;
     padding: 0 20px;
 }
