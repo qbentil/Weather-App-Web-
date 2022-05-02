@@ -50,7 +50,7 @@ export const Weather = ({location}) => {
                         <img src={`https://openweathermap.org/img/wn/${data?.weather[0]?.icon || '11d'}.png`} alt='temp-icon' />
                         <p className='temp'>{data?.main?.temp || 37} <sup>o</sup>C</p>
                     </div>
-                    <p className='description'>{data?.weather?.description || 'Clouds'}</p>
+                    <p className='description'>{data?.weather[0]?.description || 'Clouds'}</p>
                 </div>
                 <div className='right'>
                     <p className='title'>Feels like {data?.main?.feels_like || 38.5} <sup>o</sup>C</p>
