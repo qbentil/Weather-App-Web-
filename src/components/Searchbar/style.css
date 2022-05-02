@@ -1,0 +1,24 @@
+.search-form{
+    width: 50%;
+    height: 7vh;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 25px;
+    display: flex;
+}
+
+.icon{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 80%;
+    /* height: 100%; */
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
