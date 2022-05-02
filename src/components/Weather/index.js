@@ -36,7 +36,7 @@ export const Weather = ({location}) => {
     }
 
     // console.log(location);
-    fetchData(location);
+    data === undefined && fetchData(location);
     return (
         <div className='main'>
             <div className='header'>
