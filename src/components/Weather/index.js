@@ -5,38 +5,10 @@ import {ImArrowDown, ImArrowUp} from 'react-icons/im'
 
 import {AiOutlineCloudSync} from 'react-icons/ai'
 import {FaCloudShowersHeavy} from 'react-icons/fa'
-import axios from 'axios'
-import { useState } from 'react'
 
-export const Weather = ({location}) => {
-    const [data, setData] = useState(undefined);
-    const fetchData = async (loc) => {
-        let url = "https://community-open-weather-map.p.rapidapi.com/weather"
-        const options = {
-            params: {
-              q: loc,
-              lang: 'null',
-              units: 'imperial',
-            },
-            headers: {
-              'X-RapidAPI-Host': process.env.REACT_APP_API_HOST,
-              'X-RapidAPI-Key': process.env.REACT_APP_API_KEY
-            }
-          };
+export const Weather = ({data}) => {
     
-        try {
-            let res = await axios.get(url, options)
-            let response = await res.data
-            // console.log(response);
-            setData(response)
-        } catch (e) {
-          console.log(e.response.data?.message);
-          return;
-        }
-    }
-
-    // console.log(location);
-    fetchData(location);
+    
     return (
         <div className='main'>
             <div className='header'>
@@ -57,11 +29,11 @@ export const Weather = ({location}) => {
                     <div className='row-up'>
                         <div className='row'>
                             <ImArrowUp />
-                            <p>{data?.main?.temp_max}<sup>o</sup>C</p>
+                            <p>{data?.main?.temp_max || 5}<sup>o</sup>C</p>
                         </div>
                         <div className='row'>
                         <ImArrowDown />
-                        <p>{data?.main?.temp_max}<sup>o</sup>C</p>
+                        <p>{data?.main?.temp_max || 1.5}<sup>o</sup>C</p>
                         </div>
                     
                     </div>
