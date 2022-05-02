@@ -35,7 +35,7 @@ export const Weather = ({location}) => {
         }
     }
 
-    console.log(location);
+    // console.log(location);
     fetchData(location);
     return (
         <div className='main'>
