@@ -17,9 +17,9 @@ const Searchbar = ({action}) => {
                 <MdOutlineLocationSearching />
             </div>
             <input type='text' placeholder='Enter city....' onChange={(e) => setLocation(e.target.value)} />
-            <div className='icon'>
+            <button className='icon'>
                 <FaSearchLocation />
-            </div>
+            </button>
         </form>
     )
 }
