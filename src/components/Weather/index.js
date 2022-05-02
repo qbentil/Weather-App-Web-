@@ -30,13 +30,13 @@ export const Weather = ({location}) => {
             // console.log(response);
             setData(response)
         } catch (e) {
-          alert(e.response.data?.message);
+          console.log(e.response.data?.message);
           return;
         }
     }
 
-    // console.log(location);
-    data === undefined && fetchData(location);
+    console.log(location);
+    fetchData(location);
     return (
         <div className='main'>
             <div className='header'>
